@@ -25,8 +25,14 @@ setup .env file
 npm install && npm start
 cd client && npm install && npm run dev
 ```
-<pre lang="md"> ``` live_poll/ ├── client/ # Frontend (React) ├── server/ # Backend (Node.js + Express + Socket.IO) └── README.md ``` </pre>
 
+
+```
+live_poll/
+├── client/       # Frontend (React)
+├── server/       # Backend (Node.js + Express + Socket.IO)
+└── README.md
+```
 
 
 ---
