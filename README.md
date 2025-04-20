@@ -1,6 +1,9 @@
-# live_poll
+# Live Poll 🗳️
 
-A real-time polling app built using WebSockets for live bidirectional communication between clients and the server.
+A real-time polling web application built using React, Node.js, Express, and Socket.IO for bidirectional communication.
+
+🚀 Live Demo
+👉 Click here to view the deployed app https://live-poll-qsi9.onrender.com
 
 ## 🚀 Features
 
