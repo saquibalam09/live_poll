@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { Users } from "lucide-react";
 import socket from "../utils/socket";
 import Layout from "./Layout";
-import { JoinSuccessPayload } from "../interfaces/vote.interface.ts";
+// import { JoinSuccessPayload } from "../interfaces/vote.interface.ts";
 
 function JoinRoom() {
   const [name, setName] = useState("");
@@ -16,7 +16,7 @@ function JoinRoom() {
 
     socket.emit("join_room", { name, roomCode });
 
-    socket.on("join_success", (data: JoinSuccessPayload) => {
+    socket.on("join_success", () => {
       localStorage.setItem("username", name);
 
       navigate(`/poll/${roomCode}`);

@@ -21,16 +21,15 @@ const io = new Server(server, {
 //   res.send('Poll App Backend');
 // });
 
-const PORT = process.env.PORT || 5000;
-
-app.use(express.static(path.join(__dirname, "/client/dist")));
-
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "frontend", "dist", "index.html"));
-});
-
 // Initialize the socketController with the io object
 socketController(io);
+const PORT = process.env.PORT || 5000;
+
+app.use(express.static(path.join(__dirname, "client", "dist")));
+
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "client", "dist", "index.html"));
+});
 
 server.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
