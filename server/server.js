@@ -3,7 +3,11 @@ import http from "http";
 import { Server } from "socket.io";
 import path from "path";
 
+import dotenv from "dotenv";
+
 import socketController from "./socket.js";
+
+dotenv.config();
 
 const app = express();
 const server = http.createServer(app);
@@ -12,7 +16,7 @@ const __dirname = path.resolve();
 
 const io = new Server(server, {
   cors: {
-    origin: "http://localhost:5173", // or your frontend URL
+    origin: process.env.FRONTEND_URL, // or your frontend URL
   },
 });
 
