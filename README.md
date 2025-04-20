@@ -20,7 +20,7 @@ A real-time polling app built using WebSockets for live bidirectional communicat
 ### Clone the repository
 
 ```bash
-git clone https://github.com/your-username/live_poll.git
+git clone https://github.com/saquibalam09/live_poll.git
 setup .env file 
 npm install && npm start
 cd client && npm install && npm run dev
