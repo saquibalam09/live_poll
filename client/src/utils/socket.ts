@@ -1,5 +1,5 @@
 import { io } from "socket.io-client";
 
-const socket = io("http://localhost:5000"); // or your backend URL
+const socket = io("https://live-poll-qsi9.onrender.com"); // or your backend URL
 
 export default socket;
